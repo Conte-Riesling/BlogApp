@@ -6,7 +6,7 @@ from .models import Post
 def post_list(request):
     posts = Post.published.all()
     return render(request, 'blog/post/detail.html',
-                  {'post': post})
+                  {'posts': posts})
 
 def post_detail(request, id):
     try:
